@@ -82,7 +82,7 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-background relative overflow-hidden">
+    <div className="min-h-screen bg-background relative">
       <motion.div
         className="fixed top-0 left-0 right-0 h-1 bg-primary z-50"
         style={{ scaleX, transformOrigin: "0%" }}
@@ -95,7 +95,7 @@ export default function Home() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
         >
-          Diego Peralta
+          10GO.dev
         </motion.h1>
         <div className="flex items-center gap-4">
           <nav className="hidden md:flex gap-6">
@@ -143,8 +143,15 @@ export default function Home() {
 
       <main className="container mx-auto px-4 py-12 space-y-32">
         {/* Hero Section */}
-        <section className="relative min-h-[90vh] flex flex-col items-center justify-center text-center space-y-6 py-12 overflow-hidden">
+        <section className="relative min-h-[90vh] flex flex-col items-center flex-start text-center space-y-12 py-8 overflow-hidden">
           <HeroBackground />
+          <div className="w-32 h-32 md:w-52 md:h-52 rounded-full overflow-hidden mb-8 border-4 border-primary">
+            <img
+              src="https://avatars.githubusercontent.com/u/60454093?v=4"
+              alt="Diego De Jesús Peralta"
+              className="w-full h-full object-cover"
+            />
+          </div>
           <motion.div
             className="relative z-10 flex flex-col items-center space-y-6"
             initial={{ opacity: 0, y: 20 }}
@@ -304,7 +311,7 @@ export default function Home() {
             >
               <motion.div variants={item}>
                 <Card className="overflow-hidden border-primary/10 hover:border-primary/30 transition-all duration-300 group">
-                  <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
                   <CardHeader>
                     <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-2">
                       <div>
@@ -330,7 +337,7 @@ export default function Home() {
 
               <motion.div variants={item}>
                 <Card className="overflow-hidden border-primary/10 hover:border-primary/30 transition-all duration-300 group">
-                  <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
                   <CardHeader>
                     <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-2">
                       <div>
@@ -359,7 +366,7 @@ export default function Home() {
 
               <motion.div variants={item}>
                 <Card className="overflow-hidden border-primary/10 hover:border-primary/30 transition-all duration-300 group">
-                  <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
                   <CardHeader>
                     <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-2">
                       <div>
@@ -411,7 +418,7 @@ export default function Home() {
             >
               <motion.div variants={item}>
                 <Card className="overflow-hidden border-primary/10 hover:border-primary/30 transition-all duration-300 group">
-                  <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
                   <CardHeader>
                     <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-2">
                       <div>
@@ -433,7 +440,7 @@ export default function Home() {
 
               <motion.div variants={item}>
                 <Card className="overflow-hidden border-primary/10 hover:border-primary/30 transition-all duration-300 group">
-                  <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
                   <CardHeader>
                     <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-2">
                       <div>
@@ -520,9 +527,9 @@ export default function Home() {
           id="skills"
           className="scroll-mt-20"
           ref={skillsRef}
-          variants={fadeIn}
-          initial="hidden"
-          animate={skillsInView ? "visible" : "hidden"}
+          // variants={fadeIn}
+          // initial="hidden"
+          // animate={skillsInView ? "visible" : "hidden"}
         >
           <div className="space-y-4">
             <h2 className="text-3xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-500">
@@ -538,9 +545,9 @@ export default function Home() {
               <TabsContent value="technical" className="mt-6">
                 <motion.div
                   className="flex flex-wrap gap-3"
-                  variants={container}
-                  initial="hidden"
-                  animate={skillsInView ? "show" : "hidden"}
+                  // variants={container}
+                  // initial="hidden"
+                  // animate={skillsInView ? "show" : "hidden"}
                 >
                   {[
                     "C#",
@@ -571,9 +578,9 @@ export default function Home() {
               <TabsContent value="soft" className="mt-6">
                 <motion.div
                   className="flex flex-wrap gap-3"
-                  variants={container}
-                  initial="hidden"
-                  animate={skillsInView ? "show" : "hidden"}
+                  // variants={container}
+                  // initial="hidden"
+                  // animate={skillsInView ? "show" : "hidden"}
                 >
                   {[
                     "Problem Solving",
@@ -602,7 +609,7 @@ export default function Home() {
               >
                 <motion.div variants={item}>
                   <Card className="overflow-hidden border-primary/10 hover:border-primary/30 transition-all duration-300 group">
-                    <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
                     <CardHeader>
                       <CardTitle className="text-base">
                         AI-102: Azure AI Engineer Associate
@@ -613,7 +620,7 @@ export default function Home() {
                 </motion.div>
                 <motion.div variants={item}>
                   <Card className="overflow-hidden border-primary/10 hover:border-primary/30 transition-all duration-300 group">
-                    <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
                     <CardHeader>
                       <CardTitle className="text-base">
                         Scrum Foundation Professional Certification
@@ -649,7 +656,7 @@ export default function Home() {
             >
               <motion.div variants={item}>
                 <Card className="overflow-hidden border-primary/10 hover:border-primary/30 transition-all duration-300 group h-full">
-                  <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
                   <CardHeader>
                     <CardTitle>Contact Information</CardTitle>
                   </CardHeader>
@@ -683,7 +690,7 @@ export default function Home() {
                       <a
                         href="https://github.com/10GO-dev"
                         target="_blank"
-                        rel="noopener noreferrer"
+                        rel=""
                         className="hover:underline hover:text-primary transition-colors"
                       >
                         github.com/10GO-dev
@@ -696,7 +703,7 @@ export default function Home() {
                       <a
                         href="https://www.linkedin.com/in/10go-dev"
                         target="_blank"
-                        rel="noopener noreferrer"
+                        rel=""
                         className="hover:underline hover:text-primary transition-colors"
                       >
                         linkedin.com/in/10go-dev
@@ -708,7 +715,7 @@ export default function Home() {
 
               <motion.div variants={item}>
                 <Card className="overflow-hidden border-primary/10 hover:border-primary/30 transition-all duration-300 group h-full">
-                  <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
                   <CardHeader>
                     <CardTitle>Professional References</CardTitle>
                   </CardHeader>
@@ -745,7 +752,7 @@ export default function Home() {
             <Link
               href="https://github.com/10GO-dev"
               target="_blank"
-              rel="noopener noreferrer"
+              rel=""
             >
               <motion.div
                 whileHover={{ scale: 1.1, rotate: 5 }}
@@ -757,7 +764,7 @@ export default function Home() {
             <Link
               href="https://www.linkedin.com/in/10go-dev"
               target="_blank"
-              rel="noopener noreferrer"
+              rel=""
             >
               <motion.div
                 whileHover={{ scale: 1.1, rotate: 5 }}
